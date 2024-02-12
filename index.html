@@ -4,81 +4,104 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Wolfy Fiorini Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 </html>
 <body>
 	<div>
 		<!--Nav bar-->
-		<div>
+		<div id="navbar" class="sticky">
 			<nav>
-				<a href="#home">Home</a>
-				<a href="#work">Work</a>
+				<a href="#home-anchor">Home</a>
+				<a href="#work-anchor">Work</a>
 				<a href="#contact">Contact</a>
 			</nav>
 		</div>
 		
 		<!-- Home -->
 		<div id="home">
-			<!-- Name, bio, social -->
-			<div>
-				<h1>Wolfy Fiorini</h1>
-				<h2>Description</h2>
-			</div>
+			<a id="home-anchor"></a>
+			<div class="content">
+				<!-- Name, bio, social -->
+				<div>
+					<h1>Wolfy Fiorini</h1>
+					<h2>Description</h2>
+				</div>
 
-			<!-- Profile picture -->
-			<div>
-
+				<!-- Profile picture -->
+				<div class="picture-container">
+					<img class="picture-content" src="assets\WolfyFiorini_ProfilePicture.jpg"/>
+				</div>
 			</div>
 		</div>
+		<a id="work-anchor"></a>
 
 		<!-- Work -->
 		<div id="work">
 			<h1>Projects</h1>
 			<!-- Twitter API -->
-			<div>
+			<div class="card">
 				<!-- Picture -->
-				<img>
-
-				<h2>Twitter API</h2>
-				<h3>2024</h3>
-				<p>Description</p>
+				<div class="picture-container">
+					<img src="assets/placeholder.jpg">
+				</div>
+				
+				<div class="card-content">
+					<h2>Twitter API</h2>
+					<h3>2024</h3>
+					<p>Description</p>
+				</div>
 			</div>
 
 			<!-- Pantry -->
-			<div>
+			<div class="card">
 				<!-- Picture -->
-				<img>
+				<div class="picture-container">
+					<img src="assets/placeholder.jpg">
+				</div>
 
-				<h2>Pantry</h2>
-				<h3>2023</h3>
-				<p>Description</p>
+				<div class="card-content">
+					<h2>Pantry</h2>
+					<h3>2023</h3>
+					<p>Description</p>
+				</div>
+
 			</div>
 
 			<!-- AI art -->
-			<div>
+			<div class="card">
 				<!-- Picture -->
-				<img>
+				<div class="picture-container">
+					<img src="assets/placeholder.jpg">
+				</div>
 
-				<h2>AI art generator</h2>
-				<h3>2022</h3>
-				<p>Description</p>
+				<div class="card-content">
+					<h2>AI art generator</h2>
+					<h3>2022</h3>
+					<p>Description</p>
+				</div>
+
 			</div>
 
 			<!-- Inventory manager -->
-			<div>
+			<div class="card">
 				<!-- Picture -->
-				<img>
+				<div class="picture-container">
+					<img src="assets/placeholder.jpg">
+				</div>
 
-				<h2>Inventory Management System</h2>
-				<h3>2021</h3>
-				<p>Description</p>
+				<div class="card-content">
+					<h2>Inventory Management System</h2>
+					<h3>2021</h3>
+					<p>Description</p>
+				</div>
+
 			</div>
 
 		</div>
 
 		<!-- Contact -->
-		<div id="contact">
-			<form>
+		<div id="contact" class="form-box">
 				<label for="name">Name</label>
 				<input type="text" name="name"/>
 
@@ -89,7 +112,6 @@
 				<input type="text" name="message"/>
 
 				<button>Send message</button>
-			</form>
 		</div>
 	</div>
 	
