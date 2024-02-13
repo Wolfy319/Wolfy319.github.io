@@ -5,114 +5,53 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Wolfy Fiorini Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="style/home.css" />
 </head>
 </html>
 <body>
 	<div>
-		<!--Nav bar-->
-		<div id="navbar" class="sticky">
-			<nav>
-				<a href="#home-anchor">Home</a>
-				<a href="#work-anchor">Work</a>
-				<a href="#contact">Contact</a>
-			</nav>
-		</div>
+		<div style="width: 100%;">
+			<!--Nav bar, taken from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+			<div class="topnav sticky" id="myTopnav">
+				<a href="index.html" class="active">Home</a>
+				<a href="portfolio.html">Portfolio</a>
+				<a href="contact.html">Contact</a>
+				<i class="fa fa-bars"></i>
+				</a>
+		  </div>
 		
 		<!-- Home -->
 		<div id="home">
-			<a id="home-anchor"></a>
-			<div class="content">
-				<!-- Name, bio, social -->
-				<div>
-					<h1>Wolfy Fiorini</h1>
-					<h2>Description</h2>
-				</div>
-
+			<div class="home-container">
 				<!-- Profile picture -->
-				<div class="picture-container">
-					<img class="picture-content" src="assets\WolfyFiorini_ProfilePicture.jpg"/>
-				</div>
-			</div>
-		</div>
-		<a id="work-anchor"></a>
-
-		<!-- Work -->
-		<div id="work">
-			<h1>Projects</h1>
-			<!-- Twitter API -->
-			<div class="card">
-				<!-- Picture -->
-				<div class="picture-container">
-					<img src="assets/placeholder.jpg">
-				</div>
-				
-				<div class="card-content">
-					<h2>Twitter API</h2>
-					<h3>2024</h3>
-					<p>Description</p>
-				</div>
-			</div>
-
-			<!-- Pantry -->
-			<div class="card">
-				<!-- Picture -->
-				<div class="picture-container">
-					<img src="assets/placeholder.jpg">
+				<div class="avatar-container">
+					<img id="avatar" src="assets\WolfyFiorini_ProfilePicture.jpg"/>
 				</div>
 
-				<div class="card-content">
-					<h2>Pantry</h2>
-					<h3>2023</h3>
-					<p>Description</p>
+				<!-- Name, bio, social -->
+				<div class="">
+					<h1>Wolfy Fiorini</h1>
+					<h2 id="bio"></h2>
+					<a href="assets/WolfyFiorini_FastTrackResume_Draft2.docx" download="WolfyFiorini_Resume"><button>Download Resume</button></a>
 				</div>
+
 
 			</div>
-
-			<!-- AI art -->
-			<div class="card">
-				<!-- Picture -->
-				<div class="picture-container">
-					<img src="assets/placeholder.jpg">
-				</div>
-
-				<div class="card-content">
-					<h2>AI art generator</h2>
-					<h3>2022</h3>
-					<p>Description</p>
-				</div>
-
-			</div>
-
-			<!-- Inventory manager -->
-			<div class="card">
-				<!-- Picture -->
-				<div class="picture-container">
-					<img src="assets/placeholder.jpg">
-				</div>
-
-				<div class="card-content">
-					<h2>Inventory Management System</h2>
-					<h3>2021</h3>
-					<p>Description</p>
-				</div>
-
-			</div>
-
-		</div>
-
-		<!-- Contact -->
-		<div id="contact" class="form-box">
-				<label for="name">Name</label>
-				<input type="text" name="name"/>
-
-				<label for="email">Email address</label>
-				<input type="text" name="email"/>
-
-				<label for="message">Message</label>
-				<input type="text" name="message"/>
-
-				<button>Send message</button>
 		</div>
 	</div>
 	
+	<script>
+		window.onload = function(){
+			let bio = ""
+			let avatarUrl = ""
+			fetch("https://api.github.com/users/Wolfy319")
+			.then(r => r.json()) 
+			.then(response => {bio = response.bio; avatarUrl = response.avatar_url})
+			.then(() => {
+				document.getElementById('bio').innerHTML = bio;
+				document.getElementById('avatar').src = avatarUrl;
+			})
+		
+		};
+	</script>
 </body>
