@@ -106,7 +106,7 @@ body {
 #home {
   background-color: #b38383;
   text-align: center;
-  background-image: linear-gradient(90deg, #4831d4 76%, #ccf381 30%);
+  background-image: linear-gradient(90deg, #4831d4 70%, #ccf381 70%);
   position: relative;
   padding: 15em 0 0;
 }
@@ -247,7 +247,7 @@ h2 {
   position: relative;
 }
 .about-me {
-  background-image: linear-gradient(90deg, #ccf381 5%, #4831d4 5%);
+  background: linear-gradient(90deg, #ccf381 5%, #4831d4 5%);
   display: flex;
   flex-direction: column;
 }
@@ -259,10 +259,12 @@ h2 {
   background-color: #3928a7;
   border-radius: 500px 0;
   justify-content: space-evenly;
+  box-shadow:20px 20px 0px 1px rgba(0, 0, 0, 0.3);
 }
 
 #reversed {
   border-radius: 0 500px;
+  box-shadow:-20px 20px 0px 1px rgba(0, 0, 0, 0.3);
 }
 
 #about-me-header {

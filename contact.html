@@ -66,7 +66,10 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
-          <input type="submit" value="Send" class="button"></input>
+          <div id="confirmation" style="display: none;">
+            <p>Email submitted!</p>
+          </div>
+          <button onclick="submitForm()" id="submitbutton" type="submit" value="Send" class="button">Send</button>
         </form>
       </div>
 

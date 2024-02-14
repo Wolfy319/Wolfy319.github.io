@@ -31,3 +31,10 @@ function switchImg() {
     hidden.style.display = "none"
   }
 }
+
+function submitForm() {
+  let confirm = document.getElementById("confirmation")
+  let button = document.getElementById("submitbutton")
+  confirm.style.display = "flex"
+  button.style.display = "none"
+}
