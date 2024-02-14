@@ -108,13 +108,13 @@ body {
   text-align: center;
   background-image: linear-gradient(90deg, #4831d4 70%, #ccf381 70%);
   position: relative;
-  padding: 15em 0 0;
+  padding: 7em 0 0;
 }
 
 .home-container {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 5em;
+  margin-bottom: 4em;
 }
 
 
