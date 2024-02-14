@@ -30,6 +30,7 @@ body {
 
     body .hero-content {
         width: 80%;
+        margin:auto
     }
 
     .hero-content h1 {
@@ -46,6 +47,12 @@ body {
         width:100%
     }
 
+    body #about-me-header {
+      box-shadow: none;
+      border: none;
+      font-size: 50px;
+    }
+
     .about-me-image img{
       /* display: none; */
       width: 50%;
@@ -56,14 +63,21 @@ body {
     }
     
     body .about-container {
-      width: 100%;
+      width: 90%;
       padding:0;
+      border-radius: 100px 0;  
     }
 
     body .about-me-text {
       justify-self: center;
-      margin:auto;
+      width:80%;
+      margin: 40px auto;
       
+    }
+
+    body #reversed { 
+      border-radius: 0 100px;  
+
     }
 
     .custom-shape-divider-bottom-1707896441{
