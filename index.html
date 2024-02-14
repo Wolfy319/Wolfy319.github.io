@@ -6,38 +6,64 @@
 	<title>Wolfy Fiorini Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 	<link rel="stylesheet" type="text/css" href="style/home.css" />
+	<script type = "text/javascript" src="js/scripts.js"></script>
 </head>
 </html>
 <body>
 	<div>
-		<div style="width: 100%;">
-			<!--Nav bar, taken from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+				
+
+			<!-- Nav bar, taken from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 			<div class="topnav sticky" id="myTopnav">
 				<a href="index.html" class="active">Home</a>
 				<a href="portfolio.html">Portfolio</a>
 				<a href="contact.html">Contact</a>
 				<i class="fa fa-bars"></i>
 				</a>
-		  </div>
+		  </div> -->
 		
 		<!-- Home -->
 		<div id="home">
-			<div class="home-container">
-				<!-- Profile picture -->
-				<div class="avatar-container">
-					<img id="avatar" src="assets\WolfyFiorini_ProfilePicture.jpg"/>
+			<div class="menu-container sticky" >
+				<div id="menu" class="menu-toggle" onclick="menuSlide()">
+				  <div class="bar"></div>
+				  <div class="bar"></div>
+				  <div class="bar"></div>
 				</div>
-
-				<!-- Name, bio, social -->
-				<div class="">
-					<h1>Wolfy Fiorini</h1>
-					<h2 id="bio"></h2>
-					<a href="assets/WolfyFiorini_FastTrackResume_Draft2.docx" download="WolfyFiorini_Resume"><button>Download Resume</button></a>
-				</div>
-
-
+				<nav id="links" class="nav-menu">
+				  <ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				  </ul>
+				</nav>
 			</div>
-		</div>
+
+			<div class="home-container">
+				<!-- Name, bio, social -->
+
+			  <div class="hero-content">
+				<h1>Hi, I'm <br> <span style="font-weight: 800; color:rgb(0, 255, 119)">Wolfy Fiorini</span></h1>
+				<h2 id="bio"></h2>
+				<a href="assets/WolfyFiorini_FastTrackResume_Draft2.docx" download="WolfyFiorini_Resume" class="resume-link"><button>Download Resume</button></a>
+			  </div>
+			  <!-- Profile picture -->
+			  <div class="mobile-avatar-container">
+				<img class="mobile-avatar" alt="Profile Picture" id="mobile-avatar">
+			</div>
+			  <div class="avatar-container">
+				<img alt="Profile Picture" id="avatar">
+			  </div>
+			</div>
+			<div class="container">
+				<h2>About Me</h2>
+				<div class="about">
+				  <p>Hello! My name is [Your Name] and I'm a [Your Profession/Role]. I'm passionate about [Your Interests/Hobbies/Field of Work]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan libero sit amet turpis euismod, non posuere nisi faucibus. Quisque lobortis posuere risus, vel hendrerit ex tempus et.</p>
+				</div>
+			</div>
+		  </div>		  
+
+
 	</div>
 	
 	<script>
@@ -50,6 +76,8 @@
 			.then(() => {
 				document.getElementById('bio').innerHTML = bio;
 				document.getElementById('avatar').src = avatarUrl;
+				document.getElementById('mobile-avatar').src = avatarUrl;
+
 			})
 		
 		};

@@ -6,7 +6,7 @@
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="style/style.css" />
     <link rel="stylesheet" type="text/css" href="style/contact.css" />
-
+    <script type = "text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -34,15 +34,20 @@
 <body>
 
 
-    <div style="width: 100%;">
-        <!--Nav bar, taken from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
-        <div class="topnav sticky" id="myTopnav">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html" class="active">Contact</a>
-            <i class="fa fa-bars"></i>
-            </a>
-      </div>
+  <div class="menu-container" >
+    <div id="menu" class="menu-toggle" onclick="menuSlide()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="links" class="nav-menu">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
 
     <div class="container">
