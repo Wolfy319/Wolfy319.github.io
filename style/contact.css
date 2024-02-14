@@ -2,12 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    width:100%;
+    background-color: #4831d4;
   }
   
+  .menu-container {
+    margin-left: 0;
+  }
   .container {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 60%;
+    margin: 3rem auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -16,6 +20,7 @@ body {
   }
   
   h2 {
+    font-size: 30pt;
     margin-bottom: 20px;
   }
   
@@ -26,6 +31,7 @@ body {
   
   label {
     display: block;
+    font-size: 20pt;
     margin-bottom: 5px;
   }
   

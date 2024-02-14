@@ -7,16 +7,27 @@ function menuSlide() {
     x.classList.remove("animate");
     x.offsetHeight;
     if (direction === "up") {
-      bars.style.backgroundColor = ""
       direction = "down";
       x.style.animationDirection = "reverse";
 
     } else {
-      bars.style.backgroundColor = "#00349b"
       direction = "up";
       x.style.animationDirection = "";
     }
 
     x.classList.add("animate");
 
+}
+
+function switchImg() {
+  let main = document.getElementById("main-grad")
+  let hidden = document.getElementById("hidden-grad")
+
+  if(main.style.display === "flex") {
+    main.style.display = "none"
+    hidden.style.display = "flex"
+  } else {
+    main.style.display = "flex"
+    hidden.style.display = "none"
+  }
 }

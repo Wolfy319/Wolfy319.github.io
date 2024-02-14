@@ -6,24 +6,16 @@
 	<title>Wolfy Fiorini Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 	<link rel="stylesheet" type="text/css" href="style/home.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type = "text/javascript" src="js/scripts.js"></script>
 </head>
 </html>
 <body>
 	<div>
-				
-
-			<!-- Nav bar, taken from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
-			<div class="topnav sticky" id="myTopnav">
-				<a href="index.html" class="active">Home</a>
-				<a href="portfolio.html">Portfolio</a>
-				<a href="contact.html">Contact</a>
-				<i class="fa fa-bars"></i>
-				</a>
-		  </div> -->
 		
 		<!-- Home -->
-		<div id="home">
+		<section id="home">
+			
 			<div class="menu-container sticky" >
 				<div id="menu" class="menu-toggle" onclick="menuSlide()">
 				  <div class="bar"></div>
@@ -45,7 +37,16 @@
 			  <div class="hero-content">
 				<h1>Hi, I'm <br> <span style="font-weight: 800; color:rgb(0, 255, 119)">Wolfy Fiorini</span></h1>
 				<h2 id="bio"></h2>
-				<a href="assets/WolfyFiorini_FastTrackResume_Draft2.docx" download="WolfyFiorini_Resume" class="resume-link"><button>Download Resume</button></a>
+				<a href="assets/WolfyFiorini_FastTrackResume_Draft2.pdf" target="_blank" class="resume-link"><button>Download Resume</button></a>
+				<div>
+					<a href="https://www.linkedin.com/in/jon-fiorini/" target="_blank" class="icon">
+						<span class="fa fa-linkedin"></span>
+					</a>
+					<a href="https://github.com/Wolfy319" target="_blank" class="icon">
+						<span class="fa fa-github"></span>
+					</a>
+				</div>
+
 			  </div>
 			  <!-- Profile picture -->
 			  <div class="mobile-avatar-container">
@@ -55,13 +56,67 @@
 				<img alt="Profile Picture" id="avatar">
 			  </div>
 			</div>
-			<div class="container">
-				<h2>About Me</h2>
-				<div class="about">
-				  <p>Hello! My name is [Your Name] and I'm a [Your Profession/Role]. I'm passionate about [Your Interests/Hobbies/Field of Work]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan libero sit amet turpis euismod, non posuere nisi faucibus. Quisque lobortis posuere risus, vel hendrerit ex tempus et.</p>
-				</div>
+			<div class="custom-shape-divider-bottom-1707896441">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+				</svg>
 			</div>
-		  </div>		  
+		</section>
+
+		<!--About-->
+		<section id="about-section">
+			<div class="custom-shape-divider-top-1707896522">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+				</svg>
+			</div>
+			<div class="about-me">
+			
+				<h1 id="about-me-header">About Me</h2>
+				<div class="about-container">
+				  <div class="about-me-content">
+					<div class="about-me-text">
+					  <p>My name is Wolfy Fiorini, and I was born and raised in <span class="emphasized">Denver, Colorado</span>. I grew up with two parents who loved science, and have loved computers since I was a kid.</p>
+						<br>	
+					  <p>In high school, I was in all the <span class="emphasized">school plays</span> and performed as the school <span class="emphasized">mascot</span>. I also <span class="emphasized">mentored other students</span>, and took a couple classes on <span class="emphasized">web development</span> which sparked my interest in computer science.</p>
+					</div>
+					<div class="about-me-image">
+					  <img src="assets/play.jpg" alt="Cast of a school play posing">
+					</div>
+				  </div>
+				</div>
+				<div id="reversed" class="about-container">
+					<div class="about-me-content" style="flex-direction: row-reverse;">
+					  <div class="about-me-text">
+						<p>When trying to figure out what to do for <span class="emphasized">college</span>, I saw my stepdad (a software developer) playing video games 4 days a week.</p>
+						<br>
+						<p>As a teen, that seemed like a dream career. Now I know how much <span class="emphasized">hard work</span> goes into this field, but luckily <span class="emphasized">I found my own passion</span> for it.</p>
+						<br>
+						<p>I went to college at <span class="emphasized">Metropolitan State University of Denver</span> (Go Roadrunners!) for my B.S. in Computer Science.</p>
+						</div>
+					  <div class="about-me-image" >
+						<img src="assets/MSU.jpg" style="background-color:aliceblue"alt="MSU Denver Logo">
+					  </div>
+					</div>
+				  </div>
+				  <div class="about-container">
+					<div class="about-me-content">
+					  <div class="about-me-text">
+						<p>While in school, I learned <span class="emphasized">Java, JavaScript, Python, full stack development</span>, among other subjects. In my second year I took a class on <span class="emphasized">computer vision</span>, where I found my passion for software. </p>
+						<br> 
+						<p>In my last 2 years of college, I was a <span class="emphasized">CS teaching assistant</span> and loved helping students learn.</p>
+						<br>
+						<p>I <span class="emphasized">graduated MSU Denver in May 2023 with honors</span>, and am now training to be a full time Software Developer.</p>
+					  </div>
+					  <div class="about-me-image" onclick="switchImg()">
+						<img id="main-grad" src="assets/graduation.jpg" style="background-color:aliceblue"alt="MSU Denver Logo" >
+						<img id="hidden-grad" src="assets/easteregg.jpg" style="background-color:aliceblue; display: none;"alt="MSU Denver Logo">
+					  </div>
+					</div>
+				  </div>
+			</div>
+
+		</section>
 
 
 	</div>
